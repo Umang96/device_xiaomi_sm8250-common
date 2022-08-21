@@ -156,6 +156,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
 
+# Camera
+PRODUCT_PACKAGES += \
+    SpecialFeatures
+
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libgui_vendor \
@@ -174,7 +178,8 @@ PRODUCT_PACKAGES += \
 
 # Component overrides
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
+    $(LOCAL_PATH)/privapp-permissions-com.umang96.special.features.xml:system/etc/permissions/privapp-permissions-com.umang96.special.features.xml
 
 # Device-specific settings
 PRODUCT_PACKAGES += \

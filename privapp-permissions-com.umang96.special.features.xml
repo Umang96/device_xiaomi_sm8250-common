@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.umang96.special.features">
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+        <permission name="android.permission.WRITE_SETTINGS" />
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED" />
+        <permission name="android.permission.SCHEDULE_EXACT_ALARM" />
+        <permission name="android.permission.USE_EXACT_ALARM" />
+        <permission name="android.permission.REBOOT" />
+    </privapp-permissions>
+    <allow-in-power-save package="com.umang96.special.features" />
+</permissions>
