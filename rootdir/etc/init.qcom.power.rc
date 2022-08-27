@@ -79,7 +79,7 @@ on property:sys.boot_completed=1
     # cpu schedutil
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1612800 1:1612800"
     write /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq "0:1804800 1:0 2:0 3:0 4:2419200 5:0 6:0 7:3187200"
-    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 200
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 300
     write /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms 300
     write /proc/sys/kernel/sched_upmigrate "85 85"
     write /proc/sys/kernel/sched_downmigrate "70 70"
@@ -108,6 +108,7 @@ on property:sys.umg.cpu.perf=1
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_load 98
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq 2169600
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_load 98
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 100
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1075200 1:1075200"
     write /sys/class/thermal/thermal_message/sconfig 0
 
@@ -122,6 +123,7 @@ on property:sys.umg.cpu.perf=2
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_load 95
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq 2457600
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_load 95
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 200
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1612800 1:1612800"
     write /sys/class/thermal/thermal_message/sconfig 0
 
@@ -136,6 +138,7 @@ on property:sys.umg.cpu.perf=3
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_load 75
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq 2457600
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_load 75
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 300
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1612800 1:1612800"
     write /sys/class/thermal/thermal_message/sconfig 9
 
@@ -151,6 +154,7 @@ on property:sys.umg.cpu.perf=4
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq 2457600
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_load 70
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1804800 1:1804800"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 500
     write /sys/class/thermal/thermal_message/sconfig 9
 
 on property:sys.umg.cpu.perf=5
@@ -165,6 +169,7 @@ on property:sys.umg.cpu.perf=5
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq 2649660
     write /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_load 60
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1804800 1:1804800 4:2246400"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 600
     write /sys/class/thermal/thermal_message/sconfig 9
 
 on property:init.svc.recovery=running
