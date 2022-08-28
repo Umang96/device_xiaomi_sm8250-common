@@ -573,14 +573,6 @@ function configure_zram_parameters() {
             if [ -f /sys/block/zram0/use_dedup ]; then
                 echo 1 > /sys/block/zram0/use_dedup
             fi
-            if [ $MemTotal -le 524288 ]; then
-                echo 402653184 > /sys/block/zram0/disksize
-            elif [ $MemTotal -le 1048576 ]; then
-                echo 805306368 > /sys/block/zram0/disksize
-            else
-                zramDiskSize=$zRamSizeMB$diskSizeUnit
-                echo $zramDiskSize > /sys/block/zram0/disksize
-            fi
 
             # ZRAM may use more memory than it saves if SLAB_STORE_USER
             # debug option is enabled.
